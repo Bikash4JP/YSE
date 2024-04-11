@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            background-color: var(red light-blue);
+        }
+        ul {
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            padding: 0;
+            margin: 20px ;
+        }
+        li {
+            width: 100%;
+            position: relative; /* Position relative to enable absolute positioning of pseudo-elements */
+        }
+        li a {
+            display: block; /* Make the link fill its parent li */
+            position: relative;
+            text-decoration: none; /* Optional: Removes underline from links */
+            overflow: hidden; /* Prevents the image from overflowing the border when zoomed */
+            border-radius: 10px; /* Ensure the rounded corners for the hover effect */
+        }
+        li a::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgb(86, 184, 226);
+            opacity: 0; /* Start fully transparent */
+            transition: opacity 0.3s; /* Smooth transition for the opacity change */
+            border-radius: 10px; /* Ensure the rounded corners match the images */
+        }
+        li a:hover::after {
+            opacity: 0.3; /* On hover, become semi-transparent */
+        }
+        img {
+            width: 100%;
+            height: 50%;
+            object-fit: contain;
+            background-color: #fff;
+            border: 3px solid red;
+            border-radius: 10px;
+            aspect-ratio: 3/2;
+            object-fit: contain;
+            transition: transform 0.3s ease; /* Smooth transition for the transform */
+        }
+        li a:hover img {
+            transform: scale(1.5); /* Slightly zoom in the image */
+        }
+    </style>
+    
+        <!-- /* img {
+            width: 100%;
+            /* height: auto; */
+           
+            background-color: #fff; /* Set background color to white */
+            border: 3px solid red; /* Red border with 3px width */
+            border-radius: 10px; /* 10px border radius */
+            mix-blend-mode: color-burn;
+        } -->
+    <!-- </style> */ -->
+    
+    
+</head>
+<body>
+    <h1>Company list and website which allowing forign students to join them.</h1>
+    <ul>
+        <li><a href="https://www.apricotinc.co.jp/recruit/graduate/info/"><img src="apriotinc.png" alt=""></a></li>
+        <li><a href="https://www.aisel.ne.jp/recruit/fresh/2024/"><img src="Aisel.png" alt=""></a></li>
+        <li><a href="https://hl-soft.co.jp/en/software-engineer/"><img src="HL.png" alt=""></a></li>
+        <li><a href="https://sunwells.com/recruit/"><img src="Sunwells.png" alt=""></a></li>
+        <li><a href="https://www.hirose.com/corporate/en/"><img src="hrs.png" alt=""></a></li>
+        <li><a href="https://jna.co.jp/"><img src="jna.png" alt=""></a></li>
+        <li><a href="https://yokohamadensan.com/"><img src="yokohamadensan.png" alt=""></a></li>
+        <li><a href="https://www.digital-com.com/recruit.html"><img src="Digital.png" alt=""></a></li>
+        <li><a href="https://www.jisc.co.jp/"><img src="JISC.png" alt=""></a></li>
+        <li><a href="https://hakuei-net.co.jp/"><img src="HAKUEI.png" alt=""></a></li>
+        <li><a href="https://acroit.co.jp/"><img src="ACROIT.png" alt=""></a></li>
+        <li><a href="https://qit.co.jp/recruit"><img src="QIT.png" alt=""></a></li>
+        <li><a href="https://www.step-japan.co.jp/"><img src="step.png" alt=""></a></li>
+        <li><a href="https://www.eac-inc.co.jp/"><img src="eac.png" alt=""></a></li>
+        <li><a href="https://it-surf.co.jp/"><img src="it_surf.png" alt=""></a></li>
+    </ul>    
+</body>
+</html>
